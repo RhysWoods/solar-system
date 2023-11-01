@@ -16,4 +16,19 @@ public class Planet {
         this.numberOfMoons = numberOfMoons;
     }
 
+    public Planet(String name, int diameter, int distanceFromSun, int orbitalPeriod, int rotationPeriod) {
+        this.name = name;
+        this.diameter = diameter;
+        this.distanceFromSun = distanceFromSun;
+        this.orbitalPeriod = orbitalPeriod;
+        this.rotationPeriod = rotationPeriod;
+    }
+
+    public Planet(String name, int diameter, int distanceFromSun, int orbitalPeriod) {
+        this.name = name;
+        this.diameter = diameter;
+        this.distanceFromSun = distanceFromSun;
+        this.orbitalPeriod = orbitalPeriod;
+    }
+
 }
