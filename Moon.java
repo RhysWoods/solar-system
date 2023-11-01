@@ -1,13 +1,13 @@
 public class Moon{
 
 private String name;
-private int diameter;
-private int rotationPeriod;
-private int distanceFromPlanet;
-private int orbitPeriod;
+private double diameter;
+private double rotationPeriod;
+private double distanceFromPlanet;
+private double orbitPeriod;
 private Planet planetOrbiting;
 
-public Moon(String name, int diameter, int rotationPeriod, int distanceFromPlanet, int orbitPeriod, Planet planetOrbiting){
+public Moon(String name, double diameter, double rotationPeriod, double distanceFromPlanet, double orbitPeriod, Planet planetOrbiting){
     this.name = name;
     this.diameter = diameter;
     this.rotationPeriod = rotationPeriod;

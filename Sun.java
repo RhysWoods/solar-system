@@ -1,10 +1,10 @@
 public class Sun{
 
 private String name;
-private int diameter;
-private int rotationPeriod;
+private double diameter;
+private double rotationPeriod;
 
-public Sun(String name, int diameter, int rotationPeriod){
+public Sun(String name, double diameter, double rotationPeriod){
 this.name = name;
 this.diameter = diameter;
 this.rotationPeriod = rotationPeriod;
