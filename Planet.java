@@ -5,8 +5,9 @@ public class Planet {
     private double angle;
     private double diameter;
     private String col;
+    private double velocity;
 
-    public Planet(String name, double distance, double angle, double diameter, String col) {
+    public Planet(String name, double distance, double angle, double diameter, String col, double velocity) {
         this.name = name;
         this.distance = distance;
         this.angle = angle;
@@ -42,6 +43,10 @@ public class Planet {
         return diameter;
     }
 
+    public void setVelocity(double velocity) {
+        this.velocity = velocity;
+    }
+
     public void setDiameter(double diameter) {
         this.diameter = diameter;
     }
@@ -52,5 +57,9 @@ public class Planet {
 
     public void setCol(String col) {
         this.col = col;
+    }
+
+    public double getVelocity() {
+        return velocity;
     }
 }
