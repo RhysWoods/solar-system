@@ -15,6 +15,7 @@ public class Moon {
         this.angle = angle;
         this.velocity = velocity;
         this.planetOrbiting = planetOrbiting;
+        this.col = col;
     }
 
     // Getters
