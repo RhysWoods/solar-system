@@ -7,6 +7,7 @@ public class Sun {
     public Sun(String name, double diameter, String col) {
         this.name = name;
         this.diameter = diameter;
+        this.col = col;
     }
 
     public String getName() {
