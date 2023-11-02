@@ -13,6 +13,7 @@ public class Planet {
         this.angle = angle;
         this.diameter = diameter;
         this.col = col;
+        this.velocity = velocity;
     }
 
     public String getName() {

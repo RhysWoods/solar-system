@@ -6,8 +6,9 @@ public class Moon {
     private double angle;
     private double velocity;
     private Planet planetOrbiting;
+    private String col;
 
-    public Moon(String name, double distance, double diameter, double angle, double velocity, Planet planetOrbiting) {
+    public Moon(String name, double distance, double diameter, double angle, double velocity, Planet planetOrbiting, String col) {
         this.name = name;
         this.distance = distance;
         this.diameter = diameter;
@@ -41,6 +42,10 @@ public class Moon {
         return planetOrbiting;
     }
 
+    public String getCol() {
+        return col;
+    }
+
     // Setters
     public void setName(String name) {
         this.name = name;
@@ -64,5 +69,9 @@ public class Moon {
 
     public void setPlanetOrbiting(Planet planetOrbiting) {
         this.planetOrbiting = planetOrbiting;
+    }
+
+    public void setCol(String col) {
+        this.col = col;
     }
 }
