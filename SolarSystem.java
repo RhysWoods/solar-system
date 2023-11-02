@@ -1,6 +1,17 @@
+/**
+ * The SolarSystem class is the main class of the Solar System Project. It creates a graphical representation of the solar system and animates the planets and moons.
+ * The class contains a main method that initializes the SolarSystemGraphics object and creates instances of the Sun, Planet, and Moon classes.
+ * The class also contains a while loop that continuously updates the positions of the planets and moons and redraws them on the screen.
+ * @version 2.0
+ * @since 2021-10-15
+ */
 public class SolarSystem {
 
-	
+	/**
+	 * The main method initializes the SolarSystemGraphics object and creates instances of the Sun, Planet, and Moon classes.
+	 * It also contains a while loop that continuously updates the positions of the planets and moons and redraws them on the screen.
+	 * @param args an array of command-line arguments for the program
+	 */
 	public static void main(String[] args) {
 		SolarSystemGraphics ssg = new SolarSystemGraphics(1300, 1300);
 		double distanceMultiplier =5;
@@ -25,18 +36,20 @@ public class SolarSystem {
 		Moon[] moonArray = new Moon[8];
 		moonArray[0] = new Moon("Moon", planetArray[2].getDiameter()+10, 10, 5, 1, planetArray[2], "GRAY");
 		moonArray[1] = new Moon("Phobos", planetArray[3].getDiameter()+10, 5, 5, 2.13, planetArray[3], "GRAY");
-		moonArray[2] = new Moon("Deimos", planetArray[3].getDiameter()+10, 5, 5, 1.35, planetArray[3], "GRAY");
-		moonArray[3] = new Moon("Io", planetArray[4].getDiameter()+10, 5, 5, 17.33, planetArray[4], "GRAY");
-		moonArray[4] = new Moon("Europa", planetArray[4].getDiameter()+10, 5, 5, 13.74, planetArray[4], "GRAY");
-		moonArray[5] = new Moon("Ganymede", planetArray[4].getDiameter()+10, 5, 5, 10.88, planetArray[4], "GRAY");
-		moonArray[6] = new Moon("Callisto", planetArray[4].getDiameter()+10, 5, 5, 2.44, planetArray[4], "GRAY");
+		moonArray[2] = new Moon("Deimos", planetArray[3].getDiameter()+15, 5, 5, 1.35, planetArray[3], "GRAY");
+		moonArray[3] = new Moon("Io", planetArray[4].getDiameter()+5, 5, 5, 17.33, planetArray[4], "GRAY");
+		moonArray[4] = new Moon("Europa", planetArray[4].getDiameter()+15, 5, 5, 13.74, planetArray[4], "GRAY");
+		moonArray[5] = new Moon("Ganymede", planetArray[4].getDiameter()+20, 5, 5, 10.88, planetArray[4], "GRAY");
+		moonArray[6] = new Moon("Callisto", planetArray[4].getDiameter()+25, 5, 5, 2.44, planetArray[4], "GRAY");
 		moonArray[7] = new Moon("Titan", planetArray[5].getDiameter()+10, 5, 5, 5.57, planetArray[5], "GRAY");
 
 
 		while (true) {
 
+			// Draw the sun, planets, and moons
 			ssg.drawSolarObject(0, 0, sun.getDiameter(), sun.getColour());
 
+			// Update angle based on velocity
 			for(int i = 0; i < planetArray.length; i++){
 				planetArray[i].setAngle(planetArray[i].getAngle() + planetArray[i].getVelocity() * velocityMultiplier);
 				ssg.drawSolarObject(planetArray[i].getDistance()*distanceMultiplier, planetArray[i].getAngle(), planetArray[i].getDiameter(), planetArray[i].getCol());
@@ -47,6 +60,7 @@ public class SolarSystem {
 				ssg.drawSolarObjectAbout(moonArray[i].getDistance(), moonArray[i].getAngle(), moonArray[i].getDiameter(), moonArray[i].getCol(),moonArray[i].getPlanetOrbiting().getDistance()*distanceMultiplier, moonArray[i].getPlanetOrbiting().getAngle());
 			}
 
+			// Update the drawing
 			ssg.finishedDrawing();
 			
 		}
